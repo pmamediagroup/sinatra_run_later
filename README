@@ -5,8 +5,6 @@ Released under the MIT license
 
 Usage:
 
-inside of route add a run_later block like this:
-
 require 'rubygems'
 require 'sinatra'
 require 'run_later'
