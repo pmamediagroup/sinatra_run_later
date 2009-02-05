@@ -1,0 +1,20 @@
+Direct copy of http://github.com/mattmatt/run_later/tree/master by Ported to Rails by Mathias Meyer (http://paperplanes.de) added one line for sinatra
+
+Released under the MIT license
+
+
+Usage:
+
+inside of route add a run_later block like this:
+
+require 'rubygems'
+require 'sinatra'
+require 'run_later'
+
+get '/' do
+  run_later do
+    #some task that you don't want to block.
+    sleep 200
+  end
+  "Hello World"
+end
