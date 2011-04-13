@@ -33,10 +33,14 @@ module RunLater
     
     def initialize
       @thread = Thread.new {
-        trap :INT do
-          RunLater::Worker.shutdown
-          exit
-        end
+        
+        # removing this seems to let the process clean up nicely
+        # when used in a Rack application (for example, via Sinatra)
+        
+        # trap :INT do
+        #   RunLater::Worker.shutdown
+        #   exit
+        # end
  
         loop {
           process_queue
