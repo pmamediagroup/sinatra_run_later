@@ -1,0 +1,23 @@
+h2. Run Later for Sinatra
+
+Slight modification of TODO: insert link
+to clean up nicely when used through Rackup and @ctrl-c@ is sent.
+
+h2. Usage:
+
+<pre>
+require 'rubygems'
+require 'sinatra'
+require 'run_later'
+
+get '/' do
+	run_later do
+  	# some task that you don't want to block.
+  	sleep 20
+	end
+		
+	"Hello World"
+end
+</pre>
+
+Contributed to the Community by: http://www.pmamediagroup.com
