@@ -10,11 +10,11 @@ require 'sinatra'
 require 'run_later'
 
 get '/' do
-	run_later do
-  	# some task that you don't want to block.
-  	sleep 20
-	end
-		
-	"Hello World"
+  run_later do
+    # some task that you don't want to block.
+    sleep 20
+  end
+
+  "Hello World"
 end
 </pre>
